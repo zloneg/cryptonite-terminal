@@ -1,0 +1,178 @@
+/* MAIN CHART CONTAINER */
+.chart-container {
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    border-top: 1px solid #00f2ff; /* Neon cyan top border */
+    padding: 30px;
+    width: 95%;
+    max-width: 1100px;
+    border-radius: 4px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5), inset 0 0 20px rgba(0, 242, 255, 0.05);
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+/* PRICE TICKER CARD (EACH COIN) */
+.price-ticker {
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    min-width: 200px;
+    position: relative;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* UNIFIED HOVER EFFECT (GLOW + FLOATING) */
+.price-ticker:hover {
+    border-color: #00f2ff;
+    box-shadow: 0 0 35px rgba(0, 242, 255, 0.25), inset 0 0 10px rgba(0, 242, 255, 0.05);
+    transform: translateY(-10px);
+}
+
+.ticker-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 0 0 10px currentColor; /* Glows based on current text color */
+}
+
+.ticker-price {
+    font-family: 'Inter', sans-serif; /* Clean font for market data */
+    font-size: 24px;
+    color: #00f2ff;
+    font-weight: 800;
+    margin: 5px 0;
+}
+
+/* INPUT SECTION (MIN/MAX LIMITS) */
+.range-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* SMART ALERT INPUTS */
+.ticker-alert-input {
+    background: #000;
+    border: 1px solid #222; /* Subtle border by default */
+    color: #00ff00; /* Neon green text */
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px;
+    text-align: center;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    transition: 0.3s ease; /* Smooth transition for neon activation */
+}
+
+/* REACTIVE FOCUS/HOVER EFFECTS */
+.ticker-alert-input:hover, 
+.ticker-alert-input:focus {
+    border-color: #00ff00; /* Border lights up on interaction */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2); /* Neon glow effect */
+    background: rgba(0, 255, 0, 0.02); /* Slight green tint */
+}
+
+.ticker-alert-input::placeholder {
+    font-family: 'Orbitron', sans-serif;
+    color: #333; /* Darker placeholder for terminal aesthetic */
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+/* SYNC RANGE BUTTON */
+.set-range-btn {
+    background: transparent;
+    border: 1px solid #00f2ff;
+    color: #00f2ff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.set-range-btn:hover {
+    background: #00f2ff;
+    color: #000; /* Invert colors on hover */
+    box-shadow: 0 0 20px #00f2ff;
+}
+
+/* HIDE STANDARD NUMBER INPUT ARROWS (SPIN BUTTONS) */
+.ticker-alert-input::-webkit-outer-spin-button,
+.ticker-alert-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.ticker-alert-input[type=number] {
+    -moz-appearance: textfield; /* Specific for Firefox */
+    appearance: textfield;      /* Standard rule */
+}
+
+/* ACTIVE TARGET DISPLAY TEXT */
+.active-goal-text {
+    font-size: 9px;
+    color: #555;
+    margin-top: 10px;
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* EMPTY STATE BOX */
+.no-selection-msg {
+    margin-top: 100px;
+    border: 1px dashed #333;
+    padding: 60px;
+    text-align: center;
+}
+
+.no-selection-msg h3 {
+    color: #ff4444; /* Alert red for errors */
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* INSTRUCTION STYLES */
+.alert-instruction {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 9px; 
+    letter-spacing: 2px;
+    color: #555; 
+    text-align: center;
+    margin-top: -25px; 
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.bell-icon {
+    font-size: 12px;
+    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.3)); 
+    opacity: 0.8;
+}
+
+/* Additional check: to make sure the title doesn't get too loud */
+.page-container {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

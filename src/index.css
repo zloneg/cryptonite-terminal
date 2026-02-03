@@ -1,0 +1,127 @@
+/* GENERAL SETTINGS */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #050505;
+    color: #e0e0e0;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* PAGE CONTAINER (For About, Reports, AI_Node) */
+.page-container {
+    padding-top: 100px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/* TITLE WRAPPER (Centers the "dot + text" group) */
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    width: 100%; 
+}
+
+/* UNIFIED HEADING STYLE */
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 12px; 
+    color: #00f2ff;
+    margin: 0; 
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-shadow: 0 0 15px rgba(0, 242, 255, 0.6);
+}
+
+/* UNIFIED STATUS LINE STYLE */
+.system-status, .system-status-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #444;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 15px 0 40px;
+}
+
+/* CENTRAL CONTROL UNIT ON THE MAIN */
+.system-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+/* CYBER SEPARATOR */
+.cyber-divider {
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #333, #00f2ff, #333, transparent);
+    margin: 10px auto;
+    opacity: 0.6;
+}
+
+/* PULSE POINT (LIVE) */
+.live-pulse {
+    width: 14px;
+    height: 14px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #ff0000;
+    animation: pulse-red 1.5s infinite;
+    flex-shrink: 0;
+}
+
+@keyframes pulse-red {
+    0% { transform: scale(0.9); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.5; }
+    100% { transform: scale(0.9); opacity: 1; }
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #00f2ff; border-radius: 10px; box-shadow: 0 0 10px #00f2ff; }
+
+/* Smart cyber-grid for centering 5 elements (3+2) */
+.cyber-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center; 
+    max-width: 960px; 
+    margin: 0 auto; 
+}
+
+/* Adaptability for tablets and mobile phones */
+@media (max-width: 900px) {
+    .cyber-grid {
+        max-width: 650px; 
+    }
+}
+
+@media (max-width: 600px) {
+    .cyber-grid {
+        max-width: 320px; 
+    }
+}
+
+.digital-clock {
+    font-family: 'Share Tech Mono', monospace; 
+    font-size: 32px; 
+    color: #00ff00; 
+    letter-spacing: 2px;
+    text-shadow: 
+        0 0 5px rgba(0, 255, 0, 0.5),
+        0 0 15px rgba(0, 255, 0, 0.2);
+    display: flex;
+    align-items: center;
+    height: 100%;
+}

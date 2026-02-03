@@ -1,0 +1,182 @@
+.ai-page {
+    background-color: #050505;
+    background-image: radial-gradient(circle at center, #111 0%, #000 100%);
+    min-height: 100vh;
+    padding: 60px 20px;
+    color: #e0e0e0;
+    font-family: 'Inter', sans-serif;
+}
+
+.ai-title {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    color: #00f2ff;
+    font-size: 3rem;
+    text-shadow: 0 0 20px rgba(0, 242, 255, 0.6);
+    margin-bottom: 10px;
+}
+
+.ai-subtitle {
+    text-align: center;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 11px;
+    margin-bottom: 60px;
+}
+
+.ai-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.ai-card {
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    padding: 30px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ai-card:hover, .terminal-box:hover {
+    border-color: #00f2ff;
+    box-shadow: 0 0 30px rgba(0, 242, 255, 0.2), inset 0 0 10px rgba(0, 242, 255, 0.05);
+    transform: translateY(-10px);
+}
+
+.robot-head { font-size: 4rem; margin-bottom: 20px; display: flex; flex-direction: column; align-items: center; }
+
+.coin-name {
+    font-family: 'Orbitron', sans-serif;
+    color: #00f2ff;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+}
+
+.ai-button, .terminal-button {
+    background: transparent;
+    border: 1px solid #00f2ff;
+    color: #00f2ff;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.ai-button:hover, .terminal-button:hover {
+    background: #00f2ff;
+    color: #000;
+}
+
+/* TERMINAL SECTION */
+.free-query-section {
+    margin-top: 40px;
+    width: 90%; 
+    max-width: 940px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.terminal-box {
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    border-left: 5px solid #00f2ff;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.terminal-header {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    color: #00f2ff;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.terminal-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    outline: none;
+    resize: none;
+    height: 100px;
+}
+
+.terminal-button { align-self: flex-end; }
+
+.ai-response-box {
+    margin-top: 40px;
+    border: 1px dashed #222;
+    padding: 25px;
+    background: rgba(0, 242, 255, 0.01);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    color: #ffd700;
+    display: block;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+/* DOWNLOAD BUTTON */
+.save-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    background: rgba(0, 242, 255, 0.05); 
+    border: 1px solid #00f2ff; 
+    color: #00f2ff;
+    padding: 8px 18px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.1);
+}
+
+.save-btn:hover {
+    background: #00f2ff;
+    color: #000;
+    box-shadow: 0 0 20px #00f2ff;
+    transform: scale(1.02);
+}
+
+/* LOADING POINTS */
+.loading-dots { display: flex; gap: 8px; justify-content: center; margin-top: 15px; }
+.dot { width: 5px; height: 5px; background: #00f2ff; border-radius: 50%; animation: pulse-dot 1.4s infinite ease-in-out both; }
+.dot:nth-child(1) { animation-delay: -0.32s; }
+.dot:nth-child(2) { animation-delay: -0.16s; }
+@keyframes pulse-dot { 0%, 80%, 100% { transform: scale(0.6); opacity: 0.2; } 40% { transform: scale(1.4); opacity: 1; } }
+
+.no-selection-msg { opacity: 0.2; font-size: 18px; letter-spacing: 5px; margin-top: 50px; font-family: 'Orbitron', sans-serif; text-align: center; width: 100%; }
