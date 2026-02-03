@@ -31,5 +31,10 @@ The terminal features a unique **Cyberpunk aesthetic**:
    ```bash
    npm install
 
+## Links
+- Repository: https://github.com/zloneg/cryptonite-terminal
+- Live Demo: https://zloneg.github.io/cryptonite-terminal/
+
+
 Developed by Sophie Kaplan
 Full-Stack Web Architect Student & UI Designer
